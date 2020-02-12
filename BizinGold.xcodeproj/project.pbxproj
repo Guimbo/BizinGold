@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED22023723F4B1B600BD607D /* AssetsGroup.sks in Resources */ = {isa = PBXBuildFile; fileRef = ED22023623F4B1B600BD607D /* AssetsGroup.sks */; };
 		ED456B8D23F470A700A289E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED456B8C23F470A700A289E2 /* AppDelegate.swift */; };
 		ED456B8F23F470A700A289E2 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = ED456B8E23F470A700A289E2 /* GameScene.sks */; };
 		ED456B9123F470A700A289E2 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = ED456B9023F470A700A289E2 /* Actions.sks */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED22023623F4B1B600BD607D /* AssetsGroup.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AssetsGroup.sks; sourceTree = "<group>"; };
 		ED456B8923F470A700A289E2 /* BizinGold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BizinGold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED456B8C23F470A700A289E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED456B8E23F470A700A289E2 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			children = (
 				ED456B8C23F470A700A289E2 /* AppDelegate.swift */,
 				ED456B8E23F470A700A289E2 /* GameScene.sks */,
+				ED22023623F4B1B600BD607D /* AssetsGroup.sks */,
 				ED456B9023F470A700A289E2 /* Actions.sks */,
 				ED456B9223F470A700A289E2 /* GameScene.swift */,
 				ED456B9423F470A700A289E2 /* GameViewController.swift */,
@@ -135,6 +138,7 @@
 				ED456B8F23F470A700A289E2 /* GameScene.sks in Resources */,
 				ED456B9A23F470AB00A289E2 /* Assets.xcassets in Resources */,
 				ED456B9D23F470AB00A289E2 /* LaunchScreen.storyboard in Resources */,
+				ED22023723F4B1B600BD607D /* AssetsGroup.sks in Resources */,
 				ED456B9123F470A700A289E2 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
