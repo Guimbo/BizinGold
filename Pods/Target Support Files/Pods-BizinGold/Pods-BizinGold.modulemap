@@ -1,0 +1,6 @@
+framework module Pods_BizinGold {
+  umbrella header "Pods-BizinGold-umbrella.h"
+
+  export *
+  module * { export * }
+}
