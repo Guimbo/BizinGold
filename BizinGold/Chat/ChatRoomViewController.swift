@@ -1,40 +1,14 @@
 
-/// Copyright (c) 2019 Razeware LLC
-///
-/// Permission is hereby granted, free of charge, to any person obtaining a copy
-/// of this software and associated documentation files (the "Software"), to deal
-/// in the Software without restriction, including without limitation the rights
-/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-/// copies of the Software, and to permit persons to whom the Software is
-/// furnished to do so, subject to the following conditions:
-///
-/// The above copyright notice and this permission notice shall be included in
-/// all copies or substantial portions of the Software.
-///
-/// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
-/// distribute, sublicense, create a derivative work, and/or sell copies of the
-/// Software in any work that is designed, intended, or marketed for pedagogical or
-/// instructional purposes related to programming, coding, application development,
-/// or information technology.  Permission for such use, copying, modification,
-/// merger, publication, distribution, sublicensing, creation of derivative works,
-/// or sale is expressly withheld.
-///
-/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-/// THE SOFTWARE.
-
 import UIKit
 
 class ChatRoomViewController: UIViewController {
 
   
-  let tableView = UITableView()
-  let messageInputBar = MessageInputView()
+//  let tableView = UITableView()
+//  let messageInputBar = MessageInputView()
   let chatRoom = ChatRoom()
+    
+    let epicView = EpicView()
   
   var messages: [Message] = []
   
@@ -45,14 +19,24 @@ class ChatRoomViewController: UIViewController {
     chatRoom.delegate = self
     chatRoom.setupNetworkCommunication()
     chatRoom.joinChat(username: username)
+    self.navigationController?.setNavigationBarHidden(true, animated: true)
+    self.view = epicView
 
     
   }
-  
-  override func viewWillDisappear(_ animated: Bool) {
-    super.viewWillDisappear(animated)
-    chatRoom.stopChatSession()
-  }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        chatRoom.stopChatSession()
+    }
+
+    override func viewDidLoad() {
+      super.viewDidLoad()
+        epicView.tableView.dataSource = self
+        epicView.tableView.delegate = self
+        epicView.messageInputBar.delegate = self
+      NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    }
+    
 }
 
 //MARK - Message Input Bar
@@ -72,4 +56,29 @@ extension ChatRoomViewController: ChatRoomDelegate {
   }
   
   
+}
+
+extension ChatRoomViewController {
+
+  @objc func keyboardWillChange(notification: NSNotification) {
+    if let userInfo = notification.userInfo {
+      let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)!.cgRectValue
+        let messageBarHeight = epicView.messageInputBar.bounds.size.height
+      let point = CGPoint(x: epicView.messageInputBar.center.x, y: endFrame.origin.y - messageBarHeight/2.0)
+      let inset = UIEdgeInsets(top: 0, left: 0, bottom: endFrame.size.height, right: 0)
+      UIView.animate(withDuration: 0.25) {
+        self.epicView.messageInputBar.center = point
+        self.epicView.tableView.contentInset = inset
+      }
+    }
+  }
+
+  
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    let messageBarHeight:CGFloat = 60.0
+    let size = epicView.bounds.size
+    epicView.tableView.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height - messageBarHeight - epicView.safeAreaInsets.bottom)
+    epicView.messageInputBar.frame = CGRect(x: 0, y: size.height - messageBarHeight - self.view.safeAreaInsets.bottom, width: size.width, height: messageBarHeight)
+  }
 }

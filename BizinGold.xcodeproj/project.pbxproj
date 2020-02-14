@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		47B0D97583CF698DDA8D9DD8 /* Pods_BizinGold.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47743A4C41493B01F14A5845 /* Pods_BizinGold.framework */; };
+		ED1BF00423F6207200A30D4B /* EpicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1BF00323F6207200A30D4B /* EpicView.swift */; };
 		ED22023723F4B1B600BD607D /* AssetsGroup.sks in Resources */ = {isa = PBXBuildFile; fileRef = ED22023623F4B1B600BD607D /* AssetsGroup.sks */; };
 		ED22023923F59B6A00BD607D /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22023823F59B6A00BD607D /* ChatRoom.swift */; };
 		ED22023D23F59BDF00BD607D /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22023C23F59BDF00BD607D /* MessageTableViewCell.swift */; };
@@ -17,7 +18,7 @@
 		ED33A86223F5CC11005AB485 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33A86123F5CC11005AB485 /* StringExtension.swift */; };
 		ED33A86423F5CC8E005AB485 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33A86323F5CC8E005AB485 /* Message.swift */; };
 		ED33A86923F6066A005AB485 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33A86623F6066A005AB485 /* ChatRoomViewController.swift */; };
-		ED33A86A23F6066A005AB485 /* ChatRoomViewController+Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33A86723F6066A005AB485 /* ChatRoomViewController+Table.swift */; };
+		ED33A86A23F6066A005AB485 /* ChatViewController+Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33A86723F6066A005AB485 /* ChatViewController+Table.swift */; };
 		ED33A86B23F6066A005AB485 /* Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33A86823F6066A005AB485 /* Layouts.swift */; };
 		ED456B8D23F470A700A289E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED456B8C23F470A700A289E2 /* AppDelegate.swift */; };
 		ED456B8F23F470A700A289E2 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = ED456B8E23F470A700A289E2 /* GameScene.sks */; };
@@ -33,6 +34,7 @@
 		47743A4C41493B01F14A5845 /* Pods_BizinGold.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BizinGold.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		951E4F0D5ED45A8BC80D6DCA /* Pods-BizinGold.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BizinGold.debug.xcconfig"; path = "Target Support Files/Pods-BizinGold/Pods-BizinGold.debug.xcconfig"; sourceTree = "<group>"; };
 		E44C69817CFF51C4A15D235E /* Pods-BizinGold.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BizinGold.release.xcconfig"; path = "Target Support Files/Pods-BizinGold/Pods-BizinGold.release.xcconfig"; sourceTree = "<group>"; };
+		ED1BF00323F6207200A30D4B /* EpicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpicView.swift; sourceTree = "<group>"; };
 		ED22023623F4B1B600BD607D /* AssetsGroup.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AssetsGroup.sks; sourceTree = "<group>"; };
 		ED22023823F59B6A00BD607D /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
 		ED22023C23F59BDF00BD607D /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
@@ -42,7 +44,7 @@
 		ED33A86123F5CC11005AB485 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		ED33A86323F5CC8E005AB485 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		ED33A86623F6066A005AB485 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
-		ED33A86723F6066A005AB485 /* ChatRoomViewController+Table.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChatRoomViewController+Table.swift"; sourceTree = "<group>"; };
+		ED33A86723F6066A005AB485 /* ChatViewController+Table.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChatViewController+Table.swift"; sourceTree = "<group>"; };
 		ED33A86823F6066A005AB485 /* Layouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layouts.swift; sourceTree = "<group>"; };
 		ED456B8923F470A700A289E2 /* BizinGold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BizinGold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED456B8C23F470A700A289E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,15 +84,22 @@
 				951E4F0D5ED45A8BC80D6DCA /* Pods-BizinGold.debug.xcconfig */,
 				E44C69817CFF51C4A15D235E /* Pods-BizinGold.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		ED1BF00223F6205200A30D4B /* EpicView */ = {
+			isa = PBXGroup;
+			children = (
+				ED1BF00323F6207200A30D4B /* EpicView.swift */,
+			);
+			path = EpicView;
 			sourceTree = "<group>";
 		};
 		ED33A86523F5CCC4005AB485 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
 				ED33A86623F6066A005AB485 /* ChatRoomViewController.swift */,
-				ED33A86723F6066A005AB485 /* ChatRoomViewController+Table.swift */,
+				ED33A86723F6066A005AB485 /* ChatViewController+Table.swift */,
 				ED33A86823F6066A005AB485 /* Layouts.swift */,
 				ED22023823F59B6A00BD607D /* ChatRoom.swift */,
 				ED22023C23F59BDF00BD607D /* MessageTableViewCell.swift */,
@@ -124,6 +133,7 @@
 		ED456B8B23F470A700A289E2 /* BizinGold */ = {
 			isa = PBXGroup;
 			children = (
+				ED1BF00223F6205200A30D4B /* EpicView */,
 				ED33A86523F5CCC4005AB485 /* Chat */,
 				ED456B8C23F470A700A289E2 /* AppDelegate.swift */,
 				ED456B8E23F470A700A289E2 /* GameScene.sks */,
@@ -265,9 +275,10 @@
 				ED33A86423F5CC8E005AB485 /* Message.swift in Sources */,
 				ED22023F23F59C1E00BD607D /* Label.swift in Sources */,
 				ED22023D23F59BDF00BD607D /* MessageTableViewCell.swift in Sources */,
-				ED33A86A23F6066A005AB485 /* ChatRoomViewController+Table.swift in Sources */,
+				ED33A86A23F6066A005AB485 /* ChatViewController+Table.swift in Sources */,
 				ED33A86223F5CC11005AB485 /* StringExtension.swift in Sources */,
 				ED22025123F5B7F400BD607D /* JoinChatViewController.swift in Sources */,
+				ED1BF00423F6207200A30D4B /* EpicView.swift in Sources */,
 				ED33A86923F6066A005AB485 /* ChatRoomViewController.swift in Sources */,
 				ED33A86B23F6066A005AB485 /* Layouts.swift in Sources */,
 			);
