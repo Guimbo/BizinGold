@@ -26,7 +26,7 @@ class ChatRoom: NSObject {
     
     //2 - Liga os fluxos e os conecta ao socket do host na porta 80
     //------>Função usa o Allocator para inicializar os streams. Especifica o hostname. a porta. Inicializa os fluxos internamente
-    CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault, "localhost" as CFString, 9797, &readStream, &writeStream)
+    CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault, "localhost" as CFString, 9796, &readStream, &writeStream)
       
     // permite capturar simultaneamente uma referência retida
     //e gravar uma retenção desequilibrada, para que a memória

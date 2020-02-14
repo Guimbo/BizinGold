@@ -18,7 +18,7 @@
 		ED33A86223F5CC11005AB485 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33A86123F5CC11005AB485 /* StringExtension.swift */; };
 		ED33A86423F5CC8E005AB485 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33A86323F5CC8E005AB485 /* Message.swift */; };
 		ED33A86923F6066A005AB485 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33A86623F6066A005AB485 /* ChatRoomViewController.swift */; };
-		ED33A86A23F6066A005AB485 /* ChatViewController+Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33A86723F6066A005AB485 /* ChatViewController+Table.swift */; };
+		ED33A86A23F6066A005AB485 /* GameViewController+Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33A86723F6066A005AB485 /* GameViewController+Table.swift */; };
 		ED33A86B23F6066A005AB485 /* Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33A86823F6066A005AB485 /* Layouts.swift */; };
 		ED456B8D23F470A700A289E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED456B8C23F470A700A289E2 /* AppDelegate.swift */; };
 		ED456B8F23F470A700A289E2 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = ED456B8E23F470A700A289E2 /* GameScene.sks */; };
@@ -44,7 +44,7 @@
 		ED33A86123F5CC11005AB485 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		ED33A86323F5CC8E005AB485 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		ED33A86623F6066A005AB485 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
-		ED33A86723F6066A005AB485 /* ChatViewController+Table.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChatViewController+Table.swift"; sourceTree = "<group>"; };
+		ED33A86723F6066A005AB485 /* GameViewController+Table.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameViewController+Table.swift"; sourceTree = "<group>"; };
 		ED33A86823F6066A005AB485 /* Layouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layouts.swift; sourceTree = "<group>"; };
 		ED456B8923F470A700A289E2 /* BizinGold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BizinGold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED456B8C23F470A700A289E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				ED33A86623F6066A005AB485 /* ChatRoomViewController.swift */,
-				ED33A86723F6066A005AB485 /* ChatViewController+Table.swift */,
+				ED33A86723F6066A005AB485 /* GameViewController+Table.swift */,
 				ED33A86823F6066A005AB485 /* Layouts.swift */,
 				ED22023823F59B6A00BD607D /* ChatRoom.swift */,
 				ED22023C23F59BDF00BD607D /* MessageTableViewCell.swift */,
@@ -275,7 +275,7 @@
 				ED33A86423F5CC8E005AB485 /* Message.swift in Sources */,
 				ED22023F23F59C1E00BD607D /* Label.swift in Sources */,
 				ED22023D23F59BDF00BD607D /* MessageTableViewCell.swift in Sources */,
-				ED33A86A23F6066A005AB485 /* ChatViewController+Table.swift in Sources */,
+				ED33A86A23F6066A005AB485 /* GameViewController+Table.swift in Sources */,
 				ED33A86223F5CC11005AB485 /* StringExtension.swift in Sources */,
 				ED22025123F5B7F400BD607D /* JoinChatViewController.swift in Sources */,
 				ED1BF00423F6207200A30D4B /* EpicView.swift in Sources */,

@@ -37,7 +37,6 @@ extension EpicView {
     func setupView(){
         configView()
         buildViewsInHierarchy()
-        setContrains()
     }
     
     func configView(){
@@ -48,14 +47,6 @@ extension EpicView {
     func buildViewsInHierarchy() {
         self.addSubview(tableView)
         self.addSubview(messageInputBar)
-    }
-    
-    func setContrains() {
-        self.snp.makeConstraints{ make in
-            make.height.equalToSuperview()
-            make.width.equalTo(200)
-            make.left.bottom.top.equalToSuperview()
-        }
     }
     
 }

@@ -25,7 +25,7 @@ class JoinChatViewController: UIViewController {
 
 extension JoinChatViewController: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    let chatRoomVC = ChatRoomViewController()
+    let chatRoomVC = GameViewController()
     if let username = nameTextField.text {
       chatRoomVC.username = username
     }
