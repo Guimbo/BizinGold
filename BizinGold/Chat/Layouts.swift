@@ -4,14 +4,16 @@ import SnapKit
 extension JoinChatViewController {
 
     func configView(){
+        view.addSubview(backgroundImage)
         loadViews()
         view.addSubview(shadowView)
         view.addSubview(logoImageView)
         view.addSubview(nameTextField)
+        
     }
 
   func loadViews() {
-    view.backgroundColor = UIColor(red: 24/255, green: 180/255, blue: 128/255, alpha: 1.0)
+    
     navigationItem.title = "Doge Chat!"
 
     logoImageView.image = UIImage(named: "doge")
@@ -22,12 +24,13 @@ extension JoinChatViewController {
     shadowView.layer.shadowRadius = 5
     shadowView.layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
     shadowView.layer.shadowOpacity = 0.5
-    shadowView.backgroundColor = UIColor(red: 24 / 255, green: 180 / 255, blue: 128 / 255, alpha: 1.0)
+    shadowView.backgroundColor = .black
 
     nameTextField.placeholder = "What's your username?"
     nameTextField.backgroundColor = .white
     nameTextField.layer.cornerRadius = 4
     nameTextField.delegate = self
+
 
     let backItem = UIBarButtonItem()
     backItem.title = "Run!"
@@ -43,6 +46,9 @@ extension JoinChatViewController {
 
     nameTextField.bounds = CGRect(x: 0, y: 0, width: view.bounds.size.width - 40, height: 44)
     nameTextField.center = CGPoint(x: view.bounds.size.width / 2.0, y: logoImageView.center.y + logoImageView.bounds.size.height / 2.0 + 20 + 22)
+    
+
+    
   }
 }
 

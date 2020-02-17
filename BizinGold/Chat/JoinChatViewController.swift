@@ -7,13 +7,27 @@
 //
 
 import UIKit
+import SnapKit
 
 class JoinChatViewController: UIViewController {
-
-    let logoImageView = UIImageView()
-    let shadowView = UIView()
-    let nameTextField = TextField()
+    let backgroundImage: UIImageView = {
+        let bgImage = UIImageView()
+        bgImage.image = UIImage(named: "bizingo")
+        return bgImage
+    }()
     
+    lazy var logoImageView = UIImageView()
+    lazy var shadowView = UIView()
+    lazy var nameTextField = TextField()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        backgroundImage.snp.makeConstraints{ make in
+            make.size.equalToSuperview()
+        }
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
