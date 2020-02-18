@@ -19,6 +19,7 @@
 		ED33A86423F5CC8E005AB485 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33A86323F5CC8E005AB485 /* Message.swift */; };
 		ED33A86A23F6066A005AB485 /* GameViewController+Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33A86723F6066A005AB485 /* GameViewController+Table.swift */; };
 		ED33A86B23F6066A005AB485 /* Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33A86823F6066A005AB485 /* Layouts.swift */; };
+		ED34D7FA23FACD0300D099E8 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED34D7F923FACD0300D099E8 /* Coordinate.swift */; };
 		ED456B8D23F470A700A289E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED456B8C23F470A700A289E2 /* AppDelegate.swift */; };
 		ED456B8F23F470A700A289E2 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = ED456B8E23F470A700A289E2 /* GameScene.sks */; };
 		ED456B9123F470A700A289E2 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = ED456B9023F470A700A289E2 /* Actions.sks */; };
@@ -44,6 +45,7 @@
 		ED33A86323F5CC8E005AB485 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		ED33A86723F6066A005AB485 /* GameViewController+Table.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameViewController+Table.swift"; sourceTree = "<group>"; };
 		ED33A86823F6066A005AB485 /* Layouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layouts.swift; sourceTree = "<group>"; };
+		ED34D7F923FACD0300D099E8 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		ED456B8923F470A700A289E2 /* BizinGold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BizinGold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED456B8C23F470A700A289E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED456B8E23F470A700A289E2 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				ED456B9923F470AB00A289E2 /* Assets.xcassets */,
 				ED456B9B23F470AB00A289E2 /* LaunchScreen.storyboard */,
 				ED456B9E23F470AB00A289E2 /* Info.plist */,
+				ED34D7F923FACD0300D099E8 /* Coordinate.swift */,
 			);
 			path = BizinGold;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				ED456B8D23F470A700A289E2 /* AppDelegate.swift in Sources */,
 				ED33A86423F5CC8E005AB485 /* Message.swift in Sources */,
 				ED22023F23F59C1E00BD607D /* Label.swift in Sources */,
+				ED34D7FA23FACD0300D099E8 /* Coordinate.swift in Sources */,
 				ED22023D23F59BDF00BD607D /* MessageTableViewCell.swift in Sources */,
 				ED33A86A23F6066A005AB485 /* GameViewController+Table.swift in Sources */,
 				ED33A86223F5CC11005AB485 /* StringExtension.swift in Sources */,
