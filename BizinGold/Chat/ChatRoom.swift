@@ -5,16 +5,18 @@ protocol ChatRoomDelegate: class {
 }
 
 class ChatRoom: NSObject {
-  
+    
+    static var shared = ChatRoom()
   //1 - Fluxos de entrada e saída
-  var inputStream: InputStream!
-  var outputStream: OutputStream!
+    var inputStream: InputStream!
+    var outputStream: OutputStream!
   
   //Delegate
-  weak var delegate: ChatRoomDelegate?
+    weak var delegate: ChatRoomDelegate?
   
   //2 - Define o userName
-  var username = ""
+    var username = ""
+    var portNumber:UInt32 = 1230
   
   //3 - Quantidade de dados que pode ser enviado em uma única mensagem
   let maxReadLength = 4096
@@ -26,7 +28,7 @@ class ChatRoom: NSObject {
     
     //2 - Liga os fluxos e os conecta ao socket do host na porta 80
     //------>Função usa o Allocator para inicializar os streams. Especifica o hostname. a porta. Inicializa os fluxos internamente
-    CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault, "localhost" as CFString, 9796, &readStream, &writeStream)
+    CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault, "localhost" as CFString, portNumber, &readStream, &writeStream)
       
     // permite capturar simultaneamente uma referência retida
     //e gravar uma retenção desequilibrada, para que a memória

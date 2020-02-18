@@ -9,6 +9,7 @@ extension JoinChatViewController {
         view.addSubview(shadowView)
         view.addSubview(logoImageView)
         view.addSubview(nameTextField)
+        view.addSubview(portTextField)
         
     }
 
@@ -27,9 +28,21 @@ extension JoinChatViewController {
     shadowView.backgroundColor = .black
 
     nameTextField.placeholder = "What's your username?"
-    nameTextField.backgroundColor = .white
-    nameTextField.layer.cornerRadius = 4
+    nameTextField.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.7764705882, blue: 0.6, alpha: 1)
+    nameTextField.layer.cornerRadius = 8
+    nameTextField.layer.borderColor = CGColor(srgbRed: 0, green: 0, blue: 0, alpha: 1)
+    nameTextField.layer.borderWidth = 2
+    
     nameTextField.delegate = self
+    
+    portTextField.placeholder = "Type the Room Port"
+    portTextField.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.7764705882, blue: 0.6, alpha: 1)
+    portTextField.layer.cornerRadius = 8
+    portTextField.keyboardType = .numberPad
+    portTextField.layer.borderColor = CGColor(srgbRed: 0, green: 0, blue: 0, alpha: 1)
+    portTextField.layer.borderWidth = 2
+    
+    
 
 
     let backItem = UIBarButtonItem()
@@ -47,6 +60,12 @@ extension JoinChatViewController {
     nameTextField.bounds = CGRect(x: 0, y: 0, width: view.bounds.size.width - 40, height: 44)
     nameTextField.center = CGPoint(x: view.bounds.size.width / 2.0, y: logoImageView.center.y + logoImageView.bounds.size.height / 2.0 + 20 + 22)
     
+    portTextField.snp.makeConstraints{ make in
+        make.centerX.equalToSuperview()
+        make.top.equalTo(nameTextField.snp.bottom).offset(10)
+        make.height.equalTo(nameTextField.snp.height)
+        make.width.equalTo(110)
+    }
 
     
   }

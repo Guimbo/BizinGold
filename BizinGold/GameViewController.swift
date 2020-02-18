@@ -12,7 +12,7 @@ import GameplayKit
 
 class GameViewController: UIViewController {
     
-    let chatRoom = ChatRoom()
+    let chatRoom = ChatRoom.shared
     let epicView = EpicView()
     var messages: [Message] = []
     var username = ""

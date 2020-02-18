@@ -10,6 +10,8 @@ import UIKit
 import SnapKit
 
 class JoinChatViewController: UIViewController {
+    
+    let chatRoom = ChatRoom.shared
     let backgroundImage: UIImageView = {
         let bgImage = UIImageView()
         bgImage.image = UIImage(named: "bizingo")
@@ -19,6 +21,8 @@ class JoinChatViewController: UIViewController {
     lazy var logoImageView = UIImageView()
     lazy var shadowView = UIView()
     lazy var nameTextField = TextField()
+    lazy var portTextField = TextField()
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -39,11 +43,13 @@ class JoinChatViewController: UIViewController {
 
 extension JoinChatViewController: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    let chatRoomVC = GameViewController()
-    if let username = nameTextField.text {
-      chatRoomVC.username = username
+    let gameVC = GameViewController()
+    if let username = nameTextField.text, let port = portTextField.text {
+        gameVC.username = username
+        chatRoom.portNumber = UInt32(port)!
+        
     }
-    navigationController?.pushViewController(chatRoomVC, animated: true)
+    navigationController?.pushViewController(gameVC, animated: true)
     return true
   }
 }

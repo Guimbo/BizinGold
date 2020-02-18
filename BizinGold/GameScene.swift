@@ -168,7 +168,7 @@ class GameScene: SKScene {
     //MARK: A FUNÇÃO
     func movePieceTo(piece: SKSpriteNode,pieceMatrix: (Int, Int), col: Int, row: Int) {
         let boardTileCenter = board.centerOfTile(atColumn: col, row: row)
-        let offset: CGFloat = -20
+        let offset: CGFloat = -22
         var position = CGPoint(x: boardTileCenter.x, y: boardTileCenter.y)
         
         //corrigindo centro da peça
