@@ -26,7 +26,7 @@ class ChatRoom: NSObject {
     var readStream: Unmanaged<CFReadStream>?
     var writeStream: Unmanaged<CFWriteStream>?
     
-    //2 - Liga os fluxos e os conecta ao socket do host na porta 80
+    //2 - Liga os fluxos e os conecta ao socket do host na porta digitada
     //------>Função usa o Allocator para inicializar os streams. Especifica o hostname. a porta. Inicializa os fluxos internamente
     CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault, "localhost" as CFString, portNumber, &readStream, &writeStream)
       

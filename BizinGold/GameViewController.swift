@@ -91,13 +91,23 @@ extension GameViewController: MessageInputDelegate {
 }
 
 extension GameViewController: ChatRoomDelegate {
-  func received(message: Message) {
-    print("Receiving")
-    print(message)
-    insertNewMessageCell(message)
-  }
-  
-  
+    func received(message: Message) {
+        print("Receiving")
+        print(message)
+        insertNewMessageCell(message)
+        checkGiveUp(message: message)
+      }
+    
+    func checkGiveUp(message: Message){
+        if message.message == "DESISTO" {
+    
+            self.alert_one_option(titleAlert: "FIM DE JOGO", messageAlert: "Ocorrreu uma desistência na partida. A partida está encerrada.", buttonDismiss: "OK")
+            
+        }
+    }
+    
+
+
 }
 
 extension GameViewController {
@@ -123,6 +133,17 @@ extension GameViewController {
     epicView.tableView.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height - messageBarHeight - epicView.safeAreaInsets.bottom)
     epicView.messageInputBar.frame = CGRect(x: 0, y: size.height - messageBarHeight - self.view.safeAreaInsets.bottom, width: size.width, height: messageBarHeight)
   }
+    
+    func alert_one_option(titleAlert: String, messageAlert: String, buttonDismiss: String){
+        let alert = UIAlertController(title: titleAlert, message: messageAlert, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: buttonDismiss, style: .cancel) {
+               UIAlertAction in
+            self.navigationController?.popToRootViewController(animated: true)
+            
+        }
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true)
+    }
 }
 
 extension GameViewController: UITableViewDataSource, UITableViewDelegate {
