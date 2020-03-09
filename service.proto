@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+service GameRoom {
+    rpc Request (Message) returns (Empty) {}
+    rpc RequestColor(Empty) returns (Flag){}
+}
+
+message Message {
+    string content = 1;
+}
+
+message Flag{
+    bool value = 1;
+}
+
+message Empty {}
