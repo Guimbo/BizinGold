@@ -1,7 +1,7 @@
 import UIKit
 
 protocol ChatRoomDelegate: class {
-  func received(message: Message)
+  func received(message: MessageToSend)
 }
 
 class ChatRoom: NSObject {
@@ -136,7 +136,7 @@ extension ChatRoom: StreamDelegate {
     }
   }
   
-  private func processMessageString(buffer: UnsafeMutablePointer<UInt8>, length: Int) -> Message? {
+  private func processMessageString(buffer: UnsafeMutablePointer<UInt8>, length: Int) -> MessageToSend? {
     //Init String usandi o buffer e o tamanho. Trata o texto como UTF-8, diz pra string liberar o buffer de
     // bytes quando estiver concluída. Depois divide a mensagem para tratat o nome e a mensagem separadamente.
     guard
@@ -155,7 +155,7 @@ extension ChatRoom: StreamDelegate {
     let messageSender: MessageSender = (name == self.username) ? .ourself : .someoneElse
     
     //Contrói a mensagem e a retorna.
-    return Message(message: message, messageSender: messageSender, username: name)
+    return MessageToSend(message: message, messageSender: messageSender, username: name)
   }
 }
 

@@ -1,6 +1,6 @@
 import Foundation
 
-struct Message {
+struct MessageToSend {
   let message: String
   let senderUsername: String
   let messageSender: MessageSender

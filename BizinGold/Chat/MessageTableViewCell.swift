@@ -10,7 +10,7 @@ class MessageTableViewCell: UITableViewCell {
   let messageLabel = Label()
   let nameLabel = UILabel()
   
-  func apply(message: Message) {
+  func apply(message: MessageToSend) {
     nameLabel.text = message.senderUsername
     messageLabel.text = message.message
     messageSender = message.messageSender
@@ -32,7 +32,7 @@ class MessageTableViewCell: UITableViewCell {
     addSubview(nameLabel)
   }
   
-    class func height(for message: Message, maxSizeOfView: Float) -> CGFloat {
+    class func height(for message: MessageToSend, maxSizeOfView: Float) -> CGFloat {
         let maxSize = CGSize(width: CGFloat(maxSizeOfView), height: CGFloat.greatestFiniteMagnitude)
     let nameHeight = message.messageSender == .ourself ? 0 : (height(forText: message.senderUsername, fontSize: 10, maxSize: maxSize) + 4 )
     let messageHeight = height(forText: message.message, fontSize: 17, maxSize: maxSize)

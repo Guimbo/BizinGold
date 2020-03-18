@@ -14,7 +14,7 @@ class GameViewController: UIViewController {
     
     let chatRoom = ChatRoom.shared
     let epicView = EpicView()
-    var messages: [Message] = []
+    var messages: [MessageToSend] = []
     var username = ""
     
     override func viewWillAppear(_ animated: Bool) {
@@ -91,14 +91,14 @@ extension GameViewController: MessageInputDelegate {
 }
 
 extension GameViewController: ChatRoomDelegate {
-    func received(message: Message) {
+    func received(message: MessageToSend) {
         print("Receiving")
         print(message)
         insertNewMessageCell(message)
         checkGiveUp(message: message)
       }
     
-    func checkGiveUp(message: Message){
+    func checkGiveUp(message: MessageToSend){
         if message.message == "DESISTO" {
     
             self.alert_one_option(titleAlert: "FIM DE JOGO", messageAlert: "Ocorrreu uma desistência na partida. A partida está encerrada.", buttonDismiss: "OK")
@@ -166,7 +166,7 @@ extension GameViewController: UITableViewDataSource, UITableViewDelegate {
     return height
   }
   
-  func insertNewMessageCell(_ message: Message) {
+  func insertNewMessageCell(_ message: MessageToSend) {
     messages.append(message)
     let indexPath = IndexPath(row: messages.count - 1, section: 0)
     epicView.tableView.beginUpdates()

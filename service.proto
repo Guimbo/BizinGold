@@ -1,16 +1,14 @@
 syntax = "proto3";
 
-service GameRoom {
-    rpc Request (Message) returns (Empty) {}
-    rpc RequestColor(Empty) returns (Flag){}
-}
-
-message Message {
-    string content = 1;
-}
-
-message Flag{
-    bool value = 1;
-}
+service Game {
+  
+  rpc send (Message) returns (Empty);
+ }
 
 message Empty {}
+
+
+message Message {
+  string content = 1;
+  
+}

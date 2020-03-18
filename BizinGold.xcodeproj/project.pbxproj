@@ -29,6 +29,11 @@
 		ED456B9823F470A700A289E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED456B9623F470A700A289E2 /* Main.storyboard */; };
 		ED456B9A23F470AB00A289E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED456B9923F470AB00A289E2 /* Assets.xcassets */; };
 		ED456B9D23F470AB00A289E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED456B9B23F470AB00A289E2 /* LaunchScreen.storyboard */; };
+		ED8450C1242269D000BF747D /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8450C0242269D000BF747D /* Client.swift */; };
+		ED8450C3242269D700BF747D /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8450C2242269D700BF747D /* Server.swift */; };
+		ED8450C524226FA000BF747D /* GameProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8450C424226FA000BF747D /* GameProvider.swift */; };
+		ED8450C82422714F00BF747D /* service.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8450C62422714F00BF747D /* service.grpc.swift */; };
+		ED8450C92422714F00BF747D /* service.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8450C72422714F00BF747D /* service.pb.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +62,11 @@
 		ED456B9923F470AB00A289E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED456B9C23F470AB00A289E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED456B9E23F470AB00A289E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED8450C0242269D000BF747D /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		ED8450C2242269D700BF747D /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		ED8450C424226FA000BF747D /* GameProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProvider.swift; sourceTree = "<group>"; };
+		ED8450C62422714F00BF747D /* service.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = service.grpc.swift; sourceTree = SOURCE_ROOT; };
+		ED8450C72422714F00BF747D /* service.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = service.pb.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +144,7 @@
 		ED456B8B23F470A700A289E2 /* BizinGold */ = {
 			isa = PBXGroup;
 			children = (
+				ED8450BF242269C300BF747D /* ClientServer */,
 				ED1BF00223F6205200A30D4B /* EpicView */,
 				ED33A86523F5CCC4005AB485 /* Chat */,
 				ED456B8C23F470A700A289E2 /* AppDelegate.swift */,
@@ -144,11 +155,23 @@
 				ED456B9423F470A700A289E2 /* GameViewController.swift */,
 				ED456B9623F470A700A289E2 /* Main.storyboard */,
 				ED456B9923F470AB00A289E2 /* Assets.xcassets */,
+				ED8450C62422714F00BF747D /* service.grpc.swift */,
+				ED8450C72422714F00BF747D /* service.pb.swift */,
 				ED456B9B23F470AB00A289E2 /* LaunchScreen.storyboard */,
 				ED456B9E23F470AB00A289E2 /* Info.plist */,
 				ED34D7F923FACD0300D099E8 /* Coordinate.swift */,
 			);
 			path = BizinGold;
+			sourceTree = "<group>";
+		};
+		ED8450BF242269C300BF747D /* ClientServer */ = {
+			isa = PBXGroup;
+			children = (
+				ED8450C0242269D000BF747D /* Client.swift */,
+				ED8450C2242269D700BF747D /* Server.swift */,
+				ED8450C424226FA000BF747D /* GameProvider.swift */,
+			);
+			path = ClientServer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,18 +299,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED22023923F59B6A00BD607D /* ChatRoom.swift in Sources */,
+				ED8450C92422714F00BF747D /* service.pb.swift in Sources */,
 				ED456B9323F470A700A289E2 /* GameScene.swift in Sources */,
 				ED456B9523F470A700A289E2 /* GameViewController.swift in Sources */,
 				ED22024923F59CFB00BD607D /* MessageInputView.swift in Sources */,
 				ED456B8D23F470A700A289E2 /* AppDelegate.swift in Sources */,
 				ED33A86423F5CC8E005AB485 /* Message.swift in Sources */,
 				ED22023F23F59C1E00BD607D /* Label.swift in Sources */,
+				ED8450C524226FA000BF747D /* GameProvider.swift in Sources */,
 				ED34D7FA23FACD0300D099E8 /* Coordinate.swift in Sources */,
 				ED22023D23F59BDF00BD607D /* MessageTableViewCell.swift in Sources */,
+				ED8450C82422714F00BF747D /* service.grpc.swift in Sources */,
 				ED33A86A23F6066A005AB485 /* GameViewController+Table.swift in Sources */,
+				ED8450C1242269D000BF747D /* Client.swift in Sources */,
 				ED33A86223F5CC11005AB485 /* StringExtension.swift in Sources */,
 				ED22025123F5B7F400BD607D /* JoinChatViewController.swift in Sources */,
 				ED1BF00423F6207200A30D4B /* EpicView.swift in Sources */,
+				ED8450C3242269D700BF747D /* Server.swift in Sources */,
 				ED33A86B23F6066A005AB485 /* Layouts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
