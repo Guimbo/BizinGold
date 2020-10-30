@@ -119,7 +119,7 @@ class GameScene: SKScene {
                     selectedPin.removeAction(forKey: "drop")
                     originalPin = self.returnTextureFrom(selectedPin)
                     selectedPin.run(SKAction.setTexture(clickTexture), withKey: "pickup")
-//                    selectedPin.run(SKAction.scale(to: 10, duration: 0.25), withKey: "pickup")
+
                     pieceMatrix = (row,col)
                     touchCount += 1
                 }
